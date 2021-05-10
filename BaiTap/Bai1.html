@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bài 1 - PVB</title>
+	<link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
+	<style type="text/css">
+		.mycss {
+			margin: 50px;
+		}
+		.mycss input {
+			width: 25%;
+		}
+	</style>
+</head>
+<body>
+	<div class="mycss">
+		<input id="user" type="text" placeholder="Tên đăng nhập" class="form-control">
+		<input id="pass" type="password" placeholder="Mật khẩu" class="form-control"><br>
+		<button onclick = "check()" class="btn btn-primary">Đăng nhập</button>
+	</div>
+
+	<script type="text/javascript">
+		function check()  {
+		    var user = document.getElementById("user").value;
+		    var pass = document.getElementById("pass").value;
+
+		    if(user == "" || pass == "") {
+		        alert("Không được bỏ trống Tên đăng nhập hoặc Mật khẩu!");
+		        return false;
+		    }
+		    if(pass.length < 8) {
+		        alert("Mật khẩu có chiều dài tối thiểu 8 ký tự!");
+		        return false;
+		    }
+		    if(checkEmail(user)){
+		    	alert("Dữ liệu hợp lệ! Ok bạn.")
+		    }
+		}
+		function checkEmail(email) {
+	        var at = email.indexOf("@");
+ 			var dot = email.lastIndexOf(".");
+ 			var space = email.indexOf(" ");
+ 
+			if ((at != -1) && (at != 0) && (dot != -1) && (dot > at + 1) && (dot < email.length - 1) && (space == -1)) {
+ 				return true;
+ 			} else {
+ 				alert("Chưa đúng định dạng Email.\n( Vidu@gmail.com )");
+ 				return false;
+ 			}
+	    }
+	</script>
+</body>
+</html>
+

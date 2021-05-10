@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bài 3 - PVB</title>
+</head>
+<body>
+	<script>
+	   	var now = new Date();
+	   	var today = "";
+	   	switch (now.getDay()) {
+			case 0: 	today = "Chủ nhật"; break;
+			case 1: 	today = "Thứ hai"; 	break;
+			case 2: 	today = "Thứ ba"; 	break;
+			case 3: 	today = "Thứ tư"; 	break;
+			case 4: 	today = "Thứ năm"; 	break;
+			case 5: 	today = "Thứ sáu"; 	break;
+			case 6: 	today = "Thứ bảy"; 	break;
+		}
+		alert("Ngày hôm nay: " +today+', '+now.getDate()+'/'+(now.getMonth()+1)+'/'+now.getFullYear());
+	</script>
+</body>
+</html>
+
+
+

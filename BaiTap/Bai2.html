@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bài 2 - PVB</title>
+	<link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
+	<style type="text/css">
+		.mycss {
+			padding-left: 20px;
+			padding-top: 20px;
+		}
+		.mycss button {
+			width:50px;
+			height: 50px;
+		}
+	</style>
+</head>
+<body>
+	<div class="mycss">
+		<table>
+	        <tr>
+	            <td colspan="4" ><input type="text" id="result" class="form-control"></td>
+	        </tr>
+	        <tr>
+	            <td><button class="btn btn-primary" value="+" onclick="dis('+')">+</button></td>
+	            <td><button class="btn btn-primary" value="-" onclick="dis('-')">-</button></td>
+	            <td><button class="btn btn-primary" value="*" onclick="dis('*')">x</button></td>
+	            <td><button class="btn btn-primary" value="/" onclick="dis('/')">/</button></td>
+	        </tr>
+	        <tr>
+	            <td><button class="btn btn-primary" value="7" onclick="dis('7')">7</button></td>
+	            <td><button class="btn btn-primary" value="8" onclick="dis('8')">8</button></td>
+	            <td><button class="btn btn-primary" value="9" onclick="dis('9')">9</button></td>
+	            <td rowspan="4">
+	            	<button class="btn btn-primary" value="=" onclick="solve()" style="height:210px">=</button>
+	            </td>
+	        </tr>
+	        <tr>
+	            <td><button class="btn btn-primary" value="4" onclick="dis('4')">4</button></td>
+	            <td><button class="btn btn-primary" value="5" onclick="dis('5')">5</button></td>
+	            <td><button class="btn btn-primary" value="6" onclick="dis('6')">6</button></td>
+	        </tr>
+	        <tr>
+	            <td><button class="btn btn-primary" value="1" onclick="dis('1')">1</button></td>
+	            <td><button class="btn btn-primary" value="2" onclick="dis('2')">2</button></td>
+	            <td><button class="btn btn-primary" value="3" onclick="dis('4')">3</button></td>
+	        </tr>
+	        <tr>
+	            <td><button class="btn btn-primary" value="." onclick="dis('.')">.</button></td>
+	            <td><button class="btn btn-primary" value="0" onclick="dis('0')">0</button></td>
+	            <td><button class="btn btn-primary" value="AC" onclick="clr()">AC</button></td>
+	        </tr>
+      </table>
+		
+	</div>
+
+	<script>
+		function dis(val) {
+            document.getElementById("result").value+=val
+        }
+        function solve() {
+            let x = document.getElementById("result").value
+            let y = eval(x)
+            document.getElementById("result").value = y
+        }
+        function clr() {
+            document.getElementById("result").value = ""
+        }
+	</script>
+</body>
+</html>
+
+
+
+
+
+

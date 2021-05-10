@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>KIẾN THỨC Y TẾ</title>
+	<link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" href="../mycss/mycssKTYT.css">
+	<script src="../myscript/scriptKTMT.js"></script>
+	<script src="../bootstrap/jquery.min.js"></script>
+	<script src="../bootstrap/popper.min.js"></script>
+	<script src="../bootstrap/bootstrap.min.js"></script>
+		
+</head>
+<body>
+
+	<div style="margin: 10px 150px 10px 150px">
+		<form >
+			<img src="../images/logoKTYT.png" style="width:200px; vertical-align:top">	
+			<div style="float:right; font-size:15px;">
+				<div class="input-group ">
+					<input class="form-control " type="text" name="search" placeholder="Bạn cứ nhập từ khoá, còn lại để KTYT lo" style=" position:absolute; right: 100%; width: 450px">
+					<div class="input-group-append">
+						<button class="btn btn-success" type="submit" style="font-size:16px; border-radius: 0px 5px 5px 0px;">Tìm kiếm</button>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+
+	<div class="navbarr">
+		<a href="GiaoDienChinh.html" class="tablinks"  style="margin-left: 150px">Trang chủ</a>
+		<!-- onclick="openCity(event, 'TrangChu')" -->
+		<div class="subnav">
+			<button href="#theloai" class="subnavbtn" onclick="myFunction()">Dấu hiệu bệnh</button>
+			<div id="myDropdown" class="subnav-content">
+				<input type="text" placeholder="Nhập dấu hiệu" id="myInput" onkeyup="filterFunction()" style="width:100%"><br>
+				<a href="#company">Đau đầu</a>
+				<a href="#company">Ù tai</a>
+				<a href="#company">Sứng vù</a>
+				<a href="#company">Ngứa</a>
+				<a href="#company">Dị ứng</a>
+				<a href="#company">Đau bụng</a>
+				<a href="#company">Đau vai gáy</a>
+				<a href="#company">Chóng mặt</a>
+				<a href="#company">Đau khớp</a>
+				<a href="#company">Ăn không ngon</a>
+				<a href="#company">Ngủ không được</a>
+				<a href="#company">Mẫn cảm</a>
+				<a href="#company">Kén ăn</a>
+				<a href="#company">Khó tiêu</a>
+				<a href="#company">Hoa mắt</a>
+				<a href="#company">Chảy mồ hôi</a>
+				<a href="#company">Chảy máu</a>
+				<a href="#company">Chấm đỏ</a>
+				<a href="#company">Ngộ độc</a>
+				<a href="#company">Tức ngực</a>
+				<a href="#company">Khó thở</a>
+				<a href="#company">Đau họng</a>
+				<a href="#company">Trẻ khóc</a>
+				<a href="#company">Nấm chân</a>
+				<a href="#company">Chảy máu chân răng</a>
+				<a href="#company">Mắt mờ</a>
+				<a href="#company">Co giật</a>
+				<a href="#company">Sùi bọt mép</a>
+				<a href="#company">Tiểu ra máu</a>
+				<a href="#company">...</a>
+			</div>
+		</div>
+
+		<!-- <a class="tablinks" onclick="openCity(event, 'TruyenHot')">Phòng bệnh</a> -->
+		<div class="subnav">
+			<button href="BenhThuongGap.html" class="subnavbtn" onclick="openCity(event, 'CacBenhThuongGap')">Các bệnh thường gặp</button>
+			<div class="subnav-content">
+				<a href="#">Top bệnh</a>
+				<a href="#">Top Tuần</a>
+				<a href="#">Top Tháng</a>
+				<a href="#">Top Năm</a>
+				<a href="#">Top Theo Dõi</a>
+				<a href="#">Top Yêu Thích</a>
+			</div>
+		</div> 	
+		<a href="SoCuu.html" onclick="openCity(event, 'SoCuu')">Sơ cứu</a>
+		<a href="NhanBietThaoDuoc.html" onclick="openCity(event, 'NhanBietThaoDuoc')">Nhận biết thảo dược</a>
+		<a href="KhoaHocYKhoa.html" onclick="openCity(event, 'KhoaHocYKhoa')">Khóa học y khoa</a>
+		<a href="TinTuc.html" onclick="openCity(event, 'TinTuc')">Tin tức</a>
+		<!-- <a href="#">Theo dõi</a> -->
+
+		
+
+		
+
+		<a class="openbtn" onclick="openNav()" style="float:right; margin-right:150px">Khác</a> 
+	</div>
+
+	<div id="mySidepanel" class="sidenav">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="padding: 1px 13px 1px 13px;">×</a>
+		<a href="#">Fanpage</a>
+		<a href="#">Group</a>
+		<a href="#">Donate</a>
+		<a href="#">Trợ giúp</a>
+	</div>
+
+	<div id="mySidenav">
+		<a href="#" id="truyentranh" style="font-size:15px">Truyện Tranh</a>
+		<a href="#" id="tieuthuyet" style="font-size:15px">Tiểu Thuyết</a>
+		<a href="#" id="sach" style="font-size:15px">Cửa hàng sách</a>
+		<a href="#" id="blogg" style="font-size:15px">Blog</a>
+	</div>
+
+
+
+	<div id="TrangChu" class="tabcontent">
+		<ul class="breadcrumb">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Pictures</a></li>
+			<li><a href="#">Summer 15</a></li>
+			<li>Italy</li>
+		</ul>
+
+		<div class="tooltip">Hover over me
+			<span class="tooltiptext tooltip-right">Tooltip text</span>
+		</div>
+
+	  	<h3>London</h3>
+	  	<p>London is the capital city of England.</p>
+	</div>
+
+	
+		<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+	</div>
+
+	<div class="footer">
+  		<h2>Footer</h2>
+	</div>
+
+
+
+	
+</body>
+</html>
