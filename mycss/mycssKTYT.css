@@ -455,15 +455,15 @@ input[type=text]:focus {
     @media (min-width:992px){.container,.container-lg,.container-md,.container-sm{max-width:960px}}*/
     @media (min-width:1200px){.container,.container-lg,.container-md,.container-sm,.container-xl{max-width:1237px}}
 
-.conta{
+.soCuu{
   margin-left: 150px;
   margin-right: 150px;
-  margin-top: 10px;
+  margin-top: 50px;
   float: left;
 }
 
-.conta img {
-  width: 200px;
+.soCuu img {
+  width: 300px;
 }
 
     #mySidenav a {
