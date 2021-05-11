@@ -1,0 +1,8 @@
+
+- Cập nhật lên github:
+git add .
+git commit -m " "
+git push
+
+- Update từ github về:
+git pull
