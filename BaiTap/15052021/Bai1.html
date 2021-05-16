@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>12.05.2021 - Bai1 - PVB</title>
+	<link rel="stylesheet" href="../../bootstrap/bootstrap.min.css">
+	<script src="ckeditor.js"></script>
+	<style type="text/css">
+		body {
+			background: #f4f4f4;
+		}
+		.the {
+			background-color:white; 
+			padding: 20px;
+			border-radius: 5px 5px 5px 5px;
+		}
+		.ck-editor__editable {
+    		min-height: 360px;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="container">
+		<br>
+		<div class="alert alert-primary" style="text-align:center;">
+			<strong>THÊM SẢN PHẨM MỚI</strong> 
+		</div>
+		<div class="row" >
+			<div class="col-sm-8">
+				<div class="the">
+					<div class="alert alert-secondary" style="margin-bottom:10px">
+		    			<strong>Tên sản phẩm</strong>
+		    		</div>
+		    		<input class="form-control" type="text" placeholder="Nhập tên sản phẩm"><br>
+		    		<div class="alert alert-secondary" style="margin-bottom:10px">
+		    			<strong>Nội dung</strong><br> 
+		    		</div>
+		    		<div id="editor"></div><br>
+		    		<button type="button" class="btn btn-primary">Đăng sản phẩm</button>
+				</div>
+	    	</div> 
+
+	    	<div class="col-sm-4">
+	    		<div class="the">
+	    			<div class="alert alert-secondary">
+		    			<strong>Trạng thái</strong><br> 
+		    		</div>
+		    		<div class="form-check">
+					  	<label class="form-check-label">
+					    	<input type="radio" class="form-check-input" name="optradio">Hiển thị
+					  	</label><br>
+					  	<label class="form-check-label">
+					    	<input type="radio" class="form-check-input" name="optradio">Ẩn
+					  	</label><br>
+					</div>
+					<a href="">Đặt lịch hiển thị</a>
+		    	</div>
+		    	<br>
+		    	<div class="the">
+	    			<div class="alert alert-secondary">
+		    			<strong>Phân loại</strong><br> 
+		    		</div>
+		    		<div class="form-group">
+		    			<label for="sel1">Loại</label>
+		    			<select class="form-control" id="sel1">
+		    				<option>Điện tử</option>
+		    				<option>Thức ăn</option>
+		    			</select>
+		    			<label for="sel1">Nhà cung cấp</label>
+		    			<select class="form-control" id="sel1">
+		    				<option>Thế giới di động</option>
+		    				<option>Điện máy xanh</option>
+		    			</select>
+		    		</div>
+		    	</div>
+		    	<br>
+		    	<div class="the">
+	    			<div class="alert alert-secondary">
+		    			<strong>Danh mục</strong><br> 
+		    		</div>
+		    		<div class="form-group">
+		    			<label for="sel1">Tags</label>
+		    			<select class="form-control" id="sel1">
+		    				<option>Điện thoại</option>
+		    				<option>Máy tính</option>
+		    			</select>
+		    		</div>
+		    	</div>
+	    	</div> 
+		</div>
+	</div>
+	
+	<script>
+		ClassicEditor
+		.create( document.querySelector( '#editor' ) )
+		.catch( error => {
+			console.error( error );
+		} );
+	</script>
+</body>
+</html>
+
+
